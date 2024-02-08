@@ -25,43 +25,10 @@
 
 </head>
 <body>
-	<script type="text/javascript">
-$(function(){$('.df-hide').on('click',function(){$('.pixabin-float-telegram').fadeOut(170);});});
-</script>
-<script>
-  window.onload = function() {
-  var puURL = '#';
-  var puTS = Math.round(+new Date()/1000);
-  console.log('T.'+localStorage.puTS+'/'+puTS);
-  if (typeof localStorage.puTS == 'undefined' || parseInt(localStorage.puTS) <= (puTS - 3600)) {
-    var links = document.getElementsByTagName('a');
-    for(var i = 0, len = links.length; i < len; i++) {
-      links[i].onclick = function (e) {
-        var puHref = this.getAttribute("href");
-          var puTarget = this.getAttribute("target");
-          if (puHref !== '#' && puHref !== 'javascript:void(0)') {
-          e.preventDefault();    
-          if (puTarget == '_blank') {
-            window.open(window.location.href);
-          }
-          window.open(puHref);
-          window.location.href = puURL;
-          localStorage.puTS = puTS;
-        }
-      }
-    }
-  }
-};
-    function toggleDarkMode() {
-			var body = document.body;
-			body.classList.toggle("dark-mode");
-		}
-</script>
 
-<div class="header">
             <div class="brand"><span><h3>KK Xstream</h3>&nbsp;<strong style="font-size: 13px; color: red;" >is</strong><strong style="font-size: 20px; color: red;">Play</strong>
 </span>
-                <a id=""menu" href="#"> <img id="menuimg" src="https://denver1769.pages.dev/Player/content/img/app_logo/menu.png"> </a> </div>
+                <a id="menu" href="#"> <img id="menuimg" src="https://denver1769.pages.dev/Player/content/img/app_logo/menu.png"> </a> </div>
            <div class="links" id="drop">
            	
                     <a href="index.html" class="btn text-light">Home Page</a>
